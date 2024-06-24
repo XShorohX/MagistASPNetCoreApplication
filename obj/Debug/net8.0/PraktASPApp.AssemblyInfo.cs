@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PraktASPApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e41688514db28b8d559b42474b9ee732fd13d34")]
 [assembly: System.Reflection.AssemblyProductAttribute("PraktASPApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PraktASPApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

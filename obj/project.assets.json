@@ -711,26 +711,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {}
+    "/home/nspin/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\VSCode\\MagistASPNetCoreApplication\\PraktASPApp.csproj",
+      "projectUniqueName": "/home/nspin/Documents/projects/MagistASPNetCoreApplication/PraktASPApp.csproj",
       "projectName": "PraktASPApp",
-      "projectPath": "D:\\VSCode\\MagistASPNetCoreApplication\\PraktASPApp.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "D:\\VSCode\\MagistASPNetCoreApplication\\obj\\",
+      "projectPath": "/home/nspin/Documents/projects/MagistASPNetCoreApplication/PraktASPApp.csproj",
+      "packagesPath": "/home/nspin/.nuget/packages/",
+      "outputPath": "/home/nspin/Documents/projects/MagistASPNetCoreApplication/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/nspin/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -773,7 +771,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.105/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
