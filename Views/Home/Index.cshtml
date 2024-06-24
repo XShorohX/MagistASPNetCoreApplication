@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="container center-align">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6 offset-m3">
+                <h1 class="blue-text text-darken-2">Добро пожаловать!</h1>
+                <div class="container">
+                    <div class="row s12 m6">
+                        <a class="btn waves-effect waves-light blue" asp-controller="LoginController" asp-action="Login" href="@Url.Action("Login", "Login")">
+                            Войти в аккаунт
+                        </a>
+                    </div>
+                    <div class="row s12 m6">
+                        <a class="btn waves-effect waves-light green" asp-controller="RegisterController" asp-action="Register" href="@Url.Action("Register", "Register")">
+                            Создать профиль
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        M.AutoInit();
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = PraktASPApp
+build_property.RootNamespace = PraktASPApp
+build_property.ProjectDir = /home/nspin/Documents/projects/MagistASPNetCoreApplication/
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /home/nspin/Documents/projects/MagistASPNetCoreApplication
+build_property._RazorSourceGeneratorDebug = 
+
+[/home/nspin/Documents/projects/MagistASPNetCoreApplication/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/nspin/Documents/projects/MagistASPNetCoreApplication/Views/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTG9naW4vTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/nspin/Documents/projects/MagistASPNetCoreApplication/Views/Office/Office.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT2ZmaWNlL09mZmljZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/nspin/Documents/projects/MagistASPNetCoreApplication/Views/Register/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVnaXN0ZXIvUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

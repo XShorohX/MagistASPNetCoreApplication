@@ -1,0 +1,100 @@
+﻿@{
+    ViewData["Title"] = "Office";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="center-align blue-text text-darken-2">Welcome to your private office!</h1>
+        <p class="center-align">Здарова, @ViewData["name"]!</p>
+
+        <form method="post" asp-action="Office" asp-controller="Office" class="card">
+            <div class="card-content">
+                <p>Напиши кому-нибудь</p>
+                <div class="input-field">
+                    <input id="to" type="text" asp-for="To" class="validate" name="To" required>
+                    <label for="to">Кому</label>
+                </div>
+                <div class="input-field">
+                    <input id="title" type="text" asp-for="Title" class="validate" name="Title" required>
+                    <label for="title">Заголовок</label>
+                </div>
+                <div class="input-field">
+                    <textarea id="text" asp-for="Text" class="materialize-textarea" name="Text" required></textarea>
+                    <label for="text">Текст</label>
+                </div>
+                <div class="center-align red-text">
+                    @ViewData["Message"]
+                </div>
+            </div>
+            <div class="card-action center-align">
+                <button type="submit" class="btn waves-effect waves-light green">Отправить</button>
+            </div>
+        </form>
+
+        <form method="get" asp-action="Office" asp-controller="Office" class="card">
+            <div class="card-content">
+                <div class="row">
+                    <div class="col s12">
+                        <label>
+                            <input type="checkbox" name="Status" asp-for="Status"/>
+                            <span>Фильтровать прочитанные</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="card-action center-align">
+                <button type="submit" class="btn waves-effect waves-light blue">Сохранить</button>
+            </div>
+        </form>
+
+        <table class="highlight responsive-table">
+            <thead>
+                <tr>
+                    <th>Тема</th>
+                    <th>Дата</th>
+                    <th>От</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr class="@(item.Status ? "seen-true" : "seen-false")">
+                        <td>
+                            <a href="#" data-id="@item.Id" class="message-link">@item.Title</a>
+                        </td>
+                        <td>@item.Date</td>
+                        <td>@item.From</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            M.AutoInit();
+
+            //$('.seen-false').css('background-color', '#A6FFAC');
+            $('.seen-false').css('background-color', '#E6FFF0');
+            $('.seen-true').css('background-color', 'white');
+
+            $('table').on('click', '.message-link', function (e) {
+                e.preventDefault();
+                var messageId = $(this).attr('data-id');
+                console.log(messageId);
+                $.post('/Office/MarkAsRead/' + messageId, function () {
+                    $(this).closest('tr').removeClass('seen-false').addClass('seen-true').css('background-color', 'white');
+                }.bind(this));
+            });
+        });
+    </script>
+</body>
+</html>
