@@ -25,7 +25,6 @@ namespace PraktASPApp.Controllers
 				return RedirectToAction("Index", "Home");
 			}
 
-			Console.WriteLine(model.Status);
 			var messages = (from msg in db.Messages.ToList()
 							where msg.ToUserId == user.Id
 							select msg).ToList()
